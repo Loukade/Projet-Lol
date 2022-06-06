@@ -1,0 +1,544 @@
+@import url(//db.onlinewebfonts.com/c/62a21a38107b9cdc05e42e7fa7fc8322?family=BeaufortW01-HeavyItalic);
+@font-face {font-family: "beaufort"; src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot"); src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff") format("woff"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.svg#BeaufortW01-HeavyItalic") format("svg"); } 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"beaufort"
+}
+
+body{
+    background-color: #E1E4EA;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #111;
+    color: white;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ol{
+    display: flex;
+    list-style:none;
+    position: absolute;
+    right:1%;
+}
+li{
+    padding: 10px;
+    padding-right:20px;
+}
+h1{
+    font-size: 150%;
+    text-align: left;
+    padding-left: 15%;
+}
+h2{
+    font-size: 130%;
+}
+h3{
+    margin-top: 3%;
+    font-size:110%;
+}
+h4{
+    font-size:200%;
+    font-family: "Impact", sans-serif;
+}
+section{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    align-content: center;
+}
+.container_1{
+    background-image: url(../img/lol_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+    background-position: center;
+    opacity: 0.7;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    min-width: 400px;
+    max-width: 800px;
+    background-color: white;
+    z-index: 1;
+}
+form{
+    display: flex;
+    width: 100%;
+}
+input{
+    padding-left: 20px;
+    width: 80%;
+    height: 40px;
+    margin-right: 20px;
+
+}
+.button_summoner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background-color: rgb(21, 21, 212);
+    color: white;
+}
+.button_summoner:hover{
+    background-color: rgb(5, 5, 163);
+}
+.searching_area{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 40px;
+}
+.compart{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.left_side{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding-top: 100px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.profil{
+    padding: 30px 40px;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.profil_header{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 20%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.icone_summoner{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding-left: 10px;
+    object-fit: cover;
+}
+.profil_info{
+    margin-left: 30px;
+background-color: rgba(1,1,1,0.5);
+border-radius: 20%;
+padding: 5px;
+}
+.profil_rank{
+    display: flex;
+    align-items: center;
+}
+.img_rank{
+    width: 120px;
+}
+
+.all_ranked_type{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.stat_win{
+    display: flex;
+}
+.winrate{
+
+    margin-top: 2%;
+    color: lightgreen;
+    display:flex;
+}
+.loserate{
+    padding-left: 15%;
+    margin-top: 2%;
+    color: rgb(236, 96, 96);
+    display:flex;
+}
+.all_mastery{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.mastery{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img_mastery_1{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.img_mastery_2{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.img_mastery_3{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.right_side{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.game_screen{
+    display: flex;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    height: 90%;
+}
+.collum_blue{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: end;
+    border-bottom: 10px solid #2796BC;
+    border-left: 10px solid #2796BC;
+    color: white;
+}
+.collum_red{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+    border-bottom: 10px solid #E9422E;
+    border-right: 10px solid #E9422E;
+    color: white;
+}
+.game_type{
+    display: flex;
+    flex-direction: row;
+
+}
+.game_overall{
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+.summ_name{
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+.champ_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20%;
+    margin: 5px;
+}
+.champ_row_bis{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+
+}
+.ban_blue{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 10px solid #2796BC;
+    border-left: 10px solid #2796BC;
+    border-right: 2px solid #2796BC;
+    color: white;
+    height: 100%;
+    padding-right: 20px;
+    color:black;
+}
+.ban_red{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 10px solid #E9422E;
+    border-right: 10px solid #E9422E;
+    border-left: 2px solid #E9422E;
+    color: white;
+    height: 100%;
+    padding-left: 20px;
+    color:black;
+}
+.banned_champ{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.champ_selected{
+    width: 80px;
+    height: 80px;
+
+}
+.rank{
+    font-size: 80%;
+    color: gray;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0%;
+    background-color: #111;
+    color: white;
+    position: absolute;
+}
+.footer_bis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    bottom: 0;
+    background-color: #111;
+    color: white;
+    position: absolute;
+}
+
+.noneUser{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+.game_type_info{
+    padding-left: 30px;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.historic{
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.history_screen{
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: 7s appear;
+    
+ }
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.historic_game{
+    width: 70%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 10px;
+
+    background-color: #011724;
+    color: white;
+}
+.username_history{
+display: flex;
+align-items: center;
+width: 100%;
+}
+.summ_skill{
+    width: 20px;
+    height: 20px;
+}
+.collum_historic{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+width: 30%;
+}
+.collum_info{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+}
+.collum_size_champ{
+    width:10%;
+    margin-left: 3%;
+}
+.row_historic{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.collum_info_game{
+    display: flex;
+width: 40%;
+align-items: center;
+}
+.collum_info_creep{
+    display: flex;
+width: 20%;
+align-items: center;
+}
+.historic_icon{
+
+}
+.items{
+    width: 40px;
+    height: 40px;
+    border: 1px solid goldenrod;
+}
+p{
+    padding: 5px;
+    display: flex;
+}
+
+@media screen and (max-width:980px){
+    body{
+        font-size: 12px;
+    }
+    .container_2 {
+        flex-wrap: nowrap;
+    }
+    .left_side{
+        width: 100%;
+        margin-top: 100%;
+    }
+    .right_side{
+        width: 100%;
+    }
+    .profil {
+        padding: 0px 0px;
+        width: 90%;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    .game_type_info {
+        padding-left: 0px;
+    }
+    .img_mastery_1{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .historic_game{
+        width: 95%;
+    }
+    .collum_size_champ {
+        width: 20%;
+        margin-left: 0%;
+    }
+    p {
+        padding: 1px;
+        display: flex;
+    }
+    .items {
+        width: 25px;
+        height: 25px;
+    }
+    .img_mastery_3 {
+        width: 45px;
+        height: 45px;
+    }
+    .collum_info {
+        width: 25%;
+        font-size: 9px;
+    }
+    .username_history {
+        flex-wrap: wrap;
+    }
+    .collum_historic {
+        margin-left: 3%;
+        width: 50%;
+    }
+    .historic{
+        margin-bottom: 30%;
+        margin-top: 130%;
+    }
+    .historic_icon{
+        width: 10px;
+        height: 10px;
+    }
+    .banned_champ {
+        width: 15px;
+        height: 15px;
+    }
+    .champ_selected {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,290 @@
+@import url(//db.onlinewebfonts.com/c/62a21a38107b9cdc05e42e7fa7fc8322?family=BeaufortW01-HeavyItalic);
+@font-face {font-family: "beaufort"; src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot"); src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff") format("woff"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.svg#BeaufortW01-HeavyItalic") format("svg"); } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"beaufort"
+}
+body{
+     background-color: rgb(0, 9, 19);
+}
+header{
+    display: flex;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #111;
+    color: white;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ol{
+    display: flex;
+    list-style:none;
+    position: absolute;
+    right:1%;
+}
+li{
+    padding: 10px;
+padding-right:20px;
+}
+h1{
+    font-size: 150%;
+    text-align: left;
+    padding-left: 15%;
+}
+h3{
+    margin-top: 3%;
+    font-size:150%;
+}
+h4{
+    font-size:300%;
+}
+
+h5{
+    margin-top: -40px;
+padding: 8px;
+width: 10%;
+position: absolute;
+background-color: rgb(0, 9, 19);
+display: flex;
+align-content: center;
+justify-content: center;
+font-size: 150%;
+}
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.all_champs{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.champ_card{
+    width: 15%;
+    max-width: 20%;
+    height: 20vh;
+    margin: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.champ_card:hover{
+    transform: scale3d(1.01, 1.02, 1);
+    transition: transform 300ms cubic-bezier(0.3, 0.45, 0.45, 0.90) 0s;
+    background-color: rgb(3, 67, 83);
+}
+.champ_name{
+    height: 45px;
+width: 100%;
+display: flex;
+padding-left: 5%;
+background-color: rgb(0, 102, 128);
+color: white;
+font-size: 150%;
+align-items: center;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.champ_info{
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+.champ_header{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.img_champ{
+width: 80%;
+object-fit: contain;
+}
+.title_champ{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20%;
+    padding: 10px;
+}
+h3{
+font-size: 200%;
+}
+.champ_all_ability{
+    display: flex;
+    color: white;
+    width: 100%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+}
+.bloc_cap{
+    width: 60%;
+}
+.champs_ability{
+    margin-top: 40px;
+    border: 2px solid white;
+    width: 100%;
+    padding: 10px;
+}
+.passive_title{
+    padding: 30px;
+    margin-top:-15%;
+}
+.cap_passive{
+    display: flex;
+    align-items: center;
+
+}
+.cap{
+    display: flex;
+    align-items: center;
+}
+.cap_img{
+    width: 90px;
+    margin: 10px;
+}
+.cap_name{
+    font-size: 150%;
+    font-weight: bold;
+    align-items: center;
+display: flex;
+}
+p{
+    width: 100%;
+    line-height: 150%;
+}
+.all_stats{
+    width: 40%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+.stats_screen{
+    width: 90%;
+    height: 100%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.stats_row{
+    width: 90%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+.combined_stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+}
+.status_all{
+    width: 100%;
+    display: flex;
+
+}
+.status{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+}
+.base_stat{
+display: flex;
+
+}
+.stat{
+    display: flex;
+    justify-content: center;
+}
+.pv{
+    color: green;
+}
+.armor{
+    color: yellow;
+}
+.anti_magic{
+    color: blue;
+}
+.attack{
+    color: red;
+}
+.attack_speed{
+    color: orange;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size:100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0%;
+    background-color: #111;
+    color: white;
+    position: absolute;
+}
+
+@media screen and (max-width:980px){
+    .champ_card{
+        width: 100%;
+        max-width: none;
+    }
+    .champ_info {
+        height: 50vh;
+    }
+    h5 {
+        width: 35%;
+    }
+    .champs_ability {
+        width: 90%;
+    }
+
+    .bloc_cap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .all_stats {
+        width: 100%;
+    }
+    .img_champ {
+        width: 100%;
+    }
+}
