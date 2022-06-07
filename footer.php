@@ -1,5 +1,5 @@
 <footer class="hidden">
-    <h2>A powered by frienship</h2>
+    <h2>A Site powered by frienship</h2>
     <p></p>
 </footer>
 
