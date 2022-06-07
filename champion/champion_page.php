@@ -75,6 +75,7 @@ if ($operation == ""){
                             </div>
 
                             <?php
+                            
 //                            $spell['tooltip'] = str_replace('{{ e6 }}',$spell['effectBurn'][6],$spell['tooltip']);
 //                            $spell['tooltip'] = str_replace('{{ e5 }}',$spell['effectBurn'][5],$spell['tooltip']);
 //                            $spell['tooltip'] = str_replace('{{ e4 }}',$spell['effectBurn'][4],$spell['tooltip']);
