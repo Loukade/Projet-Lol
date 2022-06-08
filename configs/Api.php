@@ -58,7 +58,7 @@ class Api
     {
 
         $httpheader=array(
-            'X-Riot-Token: RGAPI-a7577dad-40a2-4120-b8fa-ede75e3d78d5',
+            'X-Riot-Token: RGAPI-63e4bbce-c11d-4324-9171-9ed19c0d8e1e',
         );
 
         return $this->request($url, $type, $httpheader,$data);
