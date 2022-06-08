@@ -1,0 +1,88 @@
+@import url(//db.onlinewebfonts.com/c/62a21a38107b9cdc05e42e7fa7fc8322?family=BeaufortW01-HeavyItalic);
+@font-face {font-family: "beaufort"; src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot"); src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff") format("woff"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.svg#BeaufortW01-HeavyItalic") format("svg"); } 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "beaufort";
+}
+body{
+    background-color: #E1E4EA;
+}
+
+.classement{
+width: 100%;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.mainframe{
+width: 80%;
+box-shadow: 0px 0px 2px 0px rgb(102, 102, 102);
+padding: 0% 0% 2% 0%;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+}
+.header_classement{
+    display: flex;
+    width: 80%;
+    margin-top: 5%;
+}
+
+.header_part{
+    width: 20%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 10% 10% 0px 0px/ 20px 19px;
+    background-color: white;
+}
+.header_part:hover{
+    border-bottom: 1px solid transparent;
+
+}
+.img_classement{
+    width: 80%;
+
+    object-fit: cover;
+}
+.content_classement{
+    width: 100%;
+    padding: 2%;
+    }
+.player_classement{
+
+}
+
+.iron:hover{
+
+}
+.bronze:hover{
+
+}
+.silver:hover{
+
+}
+.gold:hover{
+
+}
+.platine:hover{
+
+}
+.diamond:hover{
+
+}
+.master:hover{
+
+}
+.grandmaster:hover{
+
+}
+.challenger:hover{
+
+}
+

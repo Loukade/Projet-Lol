@@ -6,6 +6,7 @@ class Chemins {
     const VUES ="application/vues/";
     const VUES_CHAMPION ="application/vues/Champion/";
     const VUES_SUMMONER ="application/vues/Summoner/";
+    const VUES_CLASSEMENT ="application/vues/Classement/";
     const VUES_PERMANENTES ="application/vues/permanentes/";
     const VUES_ADMIN ="application/vues/partie_admin/";
     
