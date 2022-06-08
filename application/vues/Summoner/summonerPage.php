@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../../../css/style.css">
 
 <section class="container_1">
 

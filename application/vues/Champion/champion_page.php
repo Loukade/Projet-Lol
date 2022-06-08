@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../css/style_champ.css">
+
 <?php
 $operation = $_GET['operation'] ?? '';
 $nomChamp = $_GET['nomChamp'] ?? '';
