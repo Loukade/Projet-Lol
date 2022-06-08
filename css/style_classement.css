@@ -19,12 +19,15 @@ flex-direction: column;
 }
 .mainframe{
 width: 80%;
-box-shadow: 0px 0px 2px 0px rgb(102, 102, 102);
 padding: 0% 0% 2% 0%;
 display: flex;
 flex-direction: column;
 overflow: hidden;
 background-color: white;
+margin-bottom: 5%;
+border-right: 1px solid #b9b9b9;
+border-bottom: 1px solid #b9b9b9;
+border-left: 1px solid #b9b9b9;
 }
 .header_classement{
     display: flex;
@@ -63,17 +66,87 @@ background-color: white;
 }
 .img_classement{
     width: 80%;
-
     object-fit: cover;
 }
+.header_rank{
+    display: flex;
+    padding: 2% 0% 2% 0%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ranked_header{
+width: 11%;
+text-align: center; 
+border-right: 1px solid black;
+margin-right: 1%;
+padding-top: 1%;
+padding-bottom: 1%;
+}
+.username_header{
+width: 39%;
+padding-top: 1%;
+padding-bottom: 1%;
+border-right: 1px solid black;
+margin-right: 1%;
+}
+.points_header{
+width: 23%;
+padding-top: 1%;
+padding-bottom: 1%;
+border-right: 1px solid black;
+margin-right: 1%;
+}
+.point_perso_header{
+width: 25%;
+padding-top: 1%;
+padding-bottom: 1%;
+}
 .content_classement{
-    width: 90%;
-padding: 2%;
-margin: 1% 5% 0% 5%;
-border: 1px solid black;
+width: 100%;
+border-top: 1px solid #a8a8a8;
+border-bottom: 1px solid #a8a8a8;
     }
 .player_classement{
+display: flex;
+width: 100%;
+align-items: center;
+}
+.ranked{
+    width: 11%;
+    text-align: center; 
+    border-right: 1px solid black;
+    margin-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 
+}
+.username{
+width: 39%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;
+display: flex;
+align-items: center;
+}
+.icon_summoner{
+    width: 6%;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin-right:1%;
+}
+.points{
+    border-left: 1px solid black;
+padding-left: 1%;
+
+width: 24%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;
+border-right: 1px solid black;
+margin-right: 1%;
+}
+.point_perso{
+    width: 25%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 .iron:hover{

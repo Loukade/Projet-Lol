@@ -44,11 +44,70 @@
                 <div class="barre">
                     <div class="barre_inbetween"></div>
                 </div>
+            <div class=header_rank>
+                <div class="ranked_header"> Classement</div>
+                <div class="username_header">Invocateur</div>
+                <div class="points_header"> Points</div>
+                <div class="point_perso_header">Maîtrises</div>
+            </div>
             <div class="content_classement">
                 <div class="player_classement">
-
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
                 </div>
             </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+            <div class="content_classement">
+                <div class="player_classement">
+                    <div class="ranked"> Classement</div>
+                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="points"> Points</div>
+                    <div class="point_perso">Maîtrises</div>
+                </div>
+            </div>
+           
+
         </div>
     </section>
 </body>
