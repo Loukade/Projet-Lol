@@ -8,17 +8,17 @@
 
   if(isset($_REQUEST['Controleur'])){
     if($_REQUEST['action'] == "afficherSummoner" || $_REQUEST['action'] == "afficherDetailSummoner" ){ ?>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     <?php }elseif($_REQUEST['action'] == "afficherChampion" || $_REQUEST['action'] == "afficherChampionDetail" ){ ?>
-    <link rel="stylesheet" href="/css/style_champ.css">
+    <link rel="stylesheet" href="css/style_champ.css">
     <?php } elseif($_REQUEST['action'] == "afficherClassement"){
 ?>
-        <link rel="stylesheet" href="/css/style_classement.css">
+        <link rel="stylesheet" href="css/style_classement.css">
         <?php
     }
   }else{
       ?>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <?php
   }?>
 

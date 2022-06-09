@@ -11,31 +11,31 @@
     <section class="classement">
         <div class="header_classement">
         <div class="header_part iron">
-            <img src="../../../img/iron.png" class="img_classement " alt="">
+            <img src="img/iron.png" class="img_classement " alt="">
         </div>
         <div class="header_part bronze">
-            <img src="../../../img/bronze.png" class="img_classement " alt="">
+            <img src="img/bronze.png" class="img_classement " alt="">
         </div>
         <div class="header_part silver">
-            <img src="../../../img/silver.png" class="img_classement " alt="">
+            <img src="img/silver.png" class="img_classement " alt="">
         </div>
         <div class="header_part gold">
-            <img src="../../../img/gold.png" class="img_classement " alt="">
+            <img src="img/gold.png" class="img_classement " alt="">
         </div>
         <div class="header_part platine">
-            <img src="../../../img/platine.png" class="img_classement " alt="">
+            <img src="img/platine.png" class="img_classement " alt="">
         </div>
         <div class="header_part diamond">
-            <img src="../../../img/diamond.png" class="img_classement " alt="">
+            <img src="img/diamond.png" class="img_classement " alt="">
         </div>
         <div class="header_part master">
-            <img src="../../../img/master.png" class="img_classement " alt="">
+            <img src="img/master.png" class="img_classement " alt="">
         </div>
         <div class="header_part grandmaster">
-            <img src="../../../img/grandmaster.png" class="img_classement " alt="">
+            <img src="img/grandmaster.png" class="img_classement " alt="">
         </div>
         <div class="header_part challenger">
-            <img src="../../../img/challenger.png" class="img_classement " alt="">
+            <img src="img/challenger.png" class="img_classement " alt="">
         </div>
     </div>
         <div class="mainframe">
@@ -52,7 +52,7 @@
             <div class="content_classement">
                 <div class="player_classement">
                     <div class="ranked"> Classement</div>
-                    <div class="username"> <img src="../../../img/platine.png" class="icon_summoner">Pseudo</div>
+                    <div class="username"> <img src="img/platine.png" class="icon_summoner">Pseudo</div>
                     <div class="points"> Points</div>
                     <div class="point_perso">Maîtrises</div>
                 </div>
