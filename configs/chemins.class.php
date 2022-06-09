@@ -16,7 +16,7 @@ class Chemins {
     const IMAGES ="public/images/";
     const IMAGES_PRODUIT ="public/images/produits/";
     const JS ="public/js/";
-    const STYLES ="public/styles/";
+    const STYLES ="css/";
     
     //Autres chemin du site
     const CONFIGS ="configs/";
