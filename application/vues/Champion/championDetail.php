@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../../../css/style_champ.css">
 <section class="champ_info">
     <div class="champ_header">
         <?php
