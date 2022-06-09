@@ -31,9 +31,5 @@ class ControleurAffichage {
         require Chemins::VUES_CHAMPION . 'championDetail.php'; // affichage de la page des champions
     }
 
-    public function afficherClassement() {
-
-        require Chemins::VUES_CLASSEMENT . 'classement.php'; // affichage de la page classement
-    }
 
 }

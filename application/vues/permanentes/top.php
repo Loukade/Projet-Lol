@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/style.css">
     <?php }elseif($_REQUEST['action'] == "afficherChampion" || $_REQUEST['action'] == "afficherChampionDetail" ){ ?>
     <link rel="stylesheet" href="css/style_champ.css">
-    <?php } elseif($_REQUEST['action'] == "afficherClassement"){
+    <?php } elseif($_REQUEST['Controleur'] == "Classement"){
 ?>
         <link rel="stylesheet" href="css/style_classement.css">
         <?php
@@ -32,6 +32,6 @@
 
         <li><a href="index.php?Controleur=Affichage&action=afficherSummoner">Accueil</a></li>
         <li><a href="index.php?Controleur=Affichage&action=afficherChampion">Champion</a></li>
-        <li><a href="index.php?Controleur=Affichage&action=afficherClassement">Classement</a></li>
+        <li><a href="index.php?Controleur=Classement&action=afficherClassement">Classement</a></li>
     </ol>
 </header>
