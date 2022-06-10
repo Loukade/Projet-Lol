@@ -25,13 +25,14 @@ h4{
     font-family: "Impact", sans-serif;
 }
 .container_1{
-    background-image: url(../img/screenshot_lucas.PNG);
+    background-image: url(../img/fond_GOLOL.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
-    opacity: 0.7;
+    background-position: center;
+    /*opacity: 0.7;*/
     height: 50vh;
 }
 article{

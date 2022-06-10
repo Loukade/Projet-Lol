@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_permanent.css">
     <?php
 
   if(isset($_REQUEST['Controleur'])){
@@ -22,54 +23,10 @@
     <?php
   }?>
 
-    <title>LoLAnalist</title>
+    <title>GoLol</title>
 </head>
-<body>
-  <style>
-  header{
-    display: flex;
-    width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    background-color: #111;
-    color: white;
-    align-items: center;
-}
-.logos{
-    width: 15%;
-    padding-left:5%
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-ol{
-    display: flex;
-    list-style:none;
-    position: absolute;
-    right:3%;
-}
-li{
-    padding: 10px;
-    padding-right:5%;
-    font-size:120%;
-}
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    background-color: #1e1e1e;
-    color: white;
-}
-h2{
-    font-size: 130%;
-}
-</style>
 <header>
-    <img src="img/logos.png" class="logos" alt="">
+    <img src="img/logos" class="logos" alt="">
     <ol>
         <?php ?>
 
