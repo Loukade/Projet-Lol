@@ -23,7 +23,7 @@
     <?php
   }?>
 
-    <title>LoLAnalist</title>
+    <title>GoLol</title>
 </head>
 <header>
     <img src="img/logos" class="logos" alt="">
