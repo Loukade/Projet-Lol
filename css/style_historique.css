@@ -1,0 +1,205 @@
+@import url(//db.onlinewebfonts.com/c/62a21a38107b9cdc05e42e7fa7fc8322?family=BeaufortW01-HeavyItalic);
+@font-face {font-family: "beaufort"; src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot"); src: url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.woff") format("woff"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/62a21a38107b9cdc05e42e7fa7fc8322.svg#BeaufortW01-HeavyItalic") format("svg"); } 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "beaufort";
+}
+body{
+    background-color: #E1E4EA;
+}
+
+.historique{
+    color: white;
+width: 100%;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.mainframe{
+width: 90%;
+box-shadow: 0px 0px 2px 0px rgb(102, 102, 102);
+padding: 0% 0% 2% 0%;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+background-color: #011724;
+margin: 5% 0% 5% 0% ;
+}
+.all_ban{
+    display: flex;
+    width: 100%;
+    
+}
+.ban_red{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5%;
+    padding-bottom: 0.5%;
+    width: 50%;
+    border-right: 1px solid rgb(177, 177, 177);
+  }
+.ban_blue{
+    display: flex;
+    justify-content:flex-end;
+    align-items:  center;
+    padding-top: 1.5%;
+    padding-bottom: 0.5%;
+    width: 50%;
+}
+.banned_red{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5%;
+    width: 50%;
+    border-right: 1px solid rgb(177, 177, 177);
+  }
+.banned_blue{
+    display: flex;
+    justify-content:center;
+    align-items:  center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 50%;
+}
+.banned{
+    width: 8%;
+    margin-left: 1.5%;
+}
+.win{
+ width: 25%;
+ display: flex;
+ justify-content: center;
+ font-size: 130%;
+}
+.kda_team{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.gold_team{
+    
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_gold{
+    width: 30%;
+}
+.game_historic{
+width: 100%;
+display: flex;
+border-top: 2px solid rgb(117, 117, 117);
+}
+.left_side{
+display: flex;
+width: 50%;
+flex-direction: column;
+border-right: 2px solid rgb(117, 117, 117);
+align-items: center;
+
+}
+.right_side{
+    display: flex;
+width: 50%;
+flex-direction: column;
+align-items: center;
+}
+.row_histo{
+    display: flex;
+    width: 100%
+}
+.name{
+display: flex;
+flex-wrap: nowrap;
+width: 100%;
+
+}
+.champion_selected{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name_summoner{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+.champion_level{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.icons{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items{
+    width: 30%;
+display: flex;
+flex-wrap: wrap;
+}
+.champ_icon_mini{
+    width: 40%;
+    margin: 1px;
+}
+.champ_icon{
+    width: 45%;
+height: 45%;
+margin: 4px;
+}
+.mini_ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.champ_icon_champ{
+    width: 75%;
+    height: 75%;
+    margin: 1px;
+}
+.summoners_spells{
+    display: flex;
+    flex-direction: column;
+}
+.items_icon{
+    width: 20%;
+    margin: 5px; 
+}
+.kda{
+    display: flex;
+    justify-content: center;
+}
+.kda_special{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+}
+.barre{
+    width: 75%;
+    border: 1px solid rgb(117, 117, 117);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
