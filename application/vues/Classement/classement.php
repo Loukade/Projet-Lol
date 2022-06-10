@@ -103,7 +103,7 @@ $api = new Api();
                         echo $classement['miniSeries']['progress'];
 
                         }?> </div>
-                    <div class="point_perso">Victoire : <?= $classement['wins']?>  Défaite : <?= $classement['losses']?></div>
+                    <div class="point_perso">Victoire&nbsp;:&nbsp;<?= $classement['wins']?>  Défaite&nbsp;:&nbsp;<?= $classement['losses']?></div>
                 </div>
             </div>
     <?php } ?>
