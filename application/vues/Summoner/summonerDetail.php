@@ -164,12 +164,13 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                     </div>
                 </div>
             </main>
+            <?php
+            if ($partieTrouve != '') {
+
+            ?>
             <main class="right_side">
                 <div class="game_screen">
-                    <?php
-                    if ($partieTrouve != '') {
 
-                        ?>
 
                         <h3 class="game_type"><?php if ($datasRecherchePartie['gameQueueConfigId'] == 420) {
                                 ?> Ranked Solo Duo 5V5
@@ -290,15 +291,16 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                             </div>
 
                         </div>
-                        <?php ?>
-                    <?php } elseif ($partieTrouve == '') {
-                        $message = 'partie non trouvé';
-                        ?>
-                        <h4><?php echo $message ?></h4>
-                        <?php
-                    } ?>
+
                 </div>
             </main>
+                <?php ?>
+            <?php } elseif ($partieTrouve == '') {
+                $message = 'partie non trouvé';
+                ?>
+                <!--                        <h4>--><?php //echo $message ?><!--</h4>-->
+                <?php
+            } ?>
         </section>
         <section class="historic">
             <div class="history_screen">
