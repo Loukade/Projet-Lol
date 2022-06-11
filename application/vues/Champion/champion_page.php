@@ -1,7 +1,5 @@
 
 <?php
-$operation = $_GET['operation'] ?? '';
-$nomChamp = $_GET['nomChamp'] ?? '';
 $Api = new Api();
 $url = 'https://euw1.api.riotgames.com';
 $versions = file_get_contents('https://ddragon.leagueoflegends.com/api/versions.json');
@@ -19,7 +17,7 @@ $list = $jsonChamp['data'];
         <?php foreach ($list as $key => $value) {
             $splashArt = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' . $list[$key]['id'] . '_0.jpg';
             ?>
-            <a href="Champion/<?php echo $list[$key]['id'] ?>" class="champ_card"
+            <a href="/Champion/<?php echo $list[$key]['id'] ?>" class="champ_card"
                style="background-image:url('<?php echo $splashArt ?>')">
                 <div class="champ_name"> <?php echo $list[$key]['id'] ?></div>
             </a>

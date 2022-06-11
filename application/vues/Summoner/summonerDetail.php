@@ -1,6 +1,10 @@
 <?php
 include('summonerPage.php');
-$searchSummoners = $_POST['Pseudo'];
+
+if(isset($_REQUEST['Pseudo']))
+    $searchSummoners = $_REQUEST['Pseudo'];
+
+
 $rep = 'good';
 $partieTrouve = '';
 $messagePseudoInconnu = '';
@@ -245,7 +249,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
 
                                             <?php $SummonerName = $datasRecherchePartie['participants'][$i]['summonerName'] ?>
                                             <div><a style="color: black;"
-                                                    href="?searchSummoners=<?php echo $SummonerName ?>&operation=search#"><?php echo $SummonerName ?></a>
+                                                    href="/Summoner/<?php echo $SummonerName ?>"><?php echo $SummonerName ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerBlue ?> </div>
                                         </div>
@@ -314,6 +318,9 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                             $matchLolByGames = $Api->requestApi($matchLolById, 'GET', '', '');
                             try {
                                 foreach ($matchLolByGames['info']['participants'] as $arrInfoParticipants) {
+                                    ?>
+
+                                    <?php
                                     if ($arrInfoParticipants['summonerName'] == $datasSummoners['name']) {
                                         $nomChampionGame = getChampionInfo($arrInfoParticipants['championId']);
                                         $iconSummonerGameBan = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionGame['id'] . '.png';
@@ -424,6 +431,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
 
                                         <?php
                                     }
+
                                 }
                             } catch (\Exception $e) {
                                 var_dump($e);
