@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"beaufort"
+    font-family:"beaufort";
+    transition: 0.4s ease-in;
 }
 
 body{
@@ -349,9 +350,13 @@ padding: 5px;
     align-items: center;
     border: 1px solid white;
     padding: 10px;
-
     background-color: #011724;
     color: white;
+}
+.historic_game:hover{
+    transform: scale(1.05);
+    transition: 0.2S linear;
+    z-index: 1;
 }
 .username_history{
 display: flex;
