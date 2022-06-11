@@ -33,5 +33,6 @@
         <li><a href="/Accueil">Accueil</a></li>
         <li><a href="/Champion">Champion</a></li>
         <li><a href="/Classement">Classement</a></li>
+        <li><a href="index.php?Controleur=Affichage&action=afficherHistorique">Historique</a></li>
     </ol>
 </header>

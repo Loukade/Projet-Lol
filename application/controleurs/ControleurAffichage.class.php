@@ -19,7 +19,7 @@ class ControleurAffichage {
     }
     public function afficherDetailSummoner() {
 
-        require Chemins::VUES_SUMMONER . 'summonerDetail.php'; // affichage de la page des Summoners
+        require Chemins::VUES_SUMMONER . 'summonerDetail.php'; // affichage de la page du Summoner detail
     }
     public function afficherChampion() {
 
@@ -28,7 +28,11 @@ class ControleurAffichage {
 
     public function afficherChampionDetail() {
 
-        require Chemins::VUES_CHAMPION . 'championDetail.php'; // affichage de la page des champions
+        require Chemins::VUES_CHAMPION . 'championDetail.php'; // affichage de la page du champion detail
+    }
+    public function afficherHistorique() {
+
+        require Chemins::VUES_HISTORIQUE . 'historique.php'; // affichage de la page de l'historique
     }
 
 
