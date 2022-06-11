@@ -1,0 +1,46 @@
+# protection des fichiers
+Options -Indexes
+
+Options +FollowSymlinks -MultiViews
+
+RewriteEngine On
+RewriteRule ^Summoner$ ?Controleur=Affichage&action=afficherDetailSummoner [L]
+RewriteRule ^Accueil$ ?Controleur=Affichage&action=afficherSummoner [L]
+RewriteRule ^Champion$ ?Controleur=Affichage&action=afficherChampion [L]
+RewriteRule ^Champion/([A-Z][a-z]*)$ ?Controleur=Affichage&action=afficherChampionDetail&nomChamp=$1 [L]
+RewriteRule ^Classement$ ?Controleur=Classement&action=afficherClassement [L]
+RewriteRule ^Classement/Iron$ ?Controleur=Classement&action=afficherIron [L]
+RewriteRule ^Classement/Bronze$ ?Controleur=Classement&action=afficherBronze [L]
+RewriteRule ^Classement/Silver$ ?Controleur=Classement&action=afficherSilver [L]
+RewriteRule ^Classement/Gold$ ?Controleur=Classement&action=afficherGold [L]
+RewriteRule ^Classement/Platine$ ?Controleur=Classement&action=afficherPlatine [L]
+RewriteRule ^Classement/Diamant$ ?Controleur=Classement&action=afficherDiamant [L]
+RewriteRule ^Classement/Master$ ?Controleur=Classement&action=afficherMaster [L]
+RewriteRule ^Classement/GrandMaster$ ?Controleur=Classement&action=afficherGrandmaster [L]
+RewriteRule ^Classement/Challenger$ ?Controleur=Classement&action=afficherChallenger [L]
+
+#RewriteRule ^Summoner/$ index.php?Controleur=Affichage&action=afficherDetailSummoner [L]
+
+<IfModule mod_headers.c>
+
+<FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+<FilesMatch "\\.(css)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=216000, private"
+</FilesMatch>
+
+<FilesMatch "\\.(x?html?|php)$">
+Header set Cache-Control "max-age=600, private, must-revalidate"
+</FilesMatch>
+
+</IfModule>
+
+
+# CONFIGURATION REDIRECTION ERREURS
+#ErrorDocument 404 http://192.168.43.143:8888/Ecole/MSPR/ReseauAdministrerSecurise/?controller=404

@@ -152,7 +152,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                             ?>
 
                             <div class="mastery">
-                                <img class="img_mastery_1" src="<?php echo $imageChamp ?>" alt="">
+                                <a href="/Champion/<?php echo $champInfo['name'] ?>"><img class="img_mastery_1" src="<?php echo $imageChamp ?>" alt="" title="<?php echo $champInfo['name'] ?>"></a>
                                 <img class="img_mastery_1" src="/img/masteries/<?php echo $masteries ?>.jpg" alt="">
                                 <div><?php echo $champInfo['name'] ?></div>
                                 <?php $pointMasteries = number_format($pointMasteries, 0);
@@ -253,9 +253,9 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                         <?php
                                         $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
                                         $iconSummonerGame = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartie['id'] . '.png'; ?>
-                                        <img class="champ_selected" src="<?php echo $iconSummonerGame ?>"
+                                        <a href="/Champion/<?php echo $nomChampionPartie['id'] ?>"><img class="champ_selected" src="<?php echo $iconSummonerGame ?>"
                                              alt="<?php echo $nomChampionPartie['id'] ?>"
-                                             title="<?php echo $nomChampionPartie['id'] ?>">
+                                             title="<?php echo $nomChampionPartie['id'] ?>"></a>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -277,7 +277,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                         <?php
                                         $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
                                         $iconSummonerGame = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartie['id'] . '.png'; ?>
-                                        <img class="champ_selected" src="<?php echo $iconSummonerGame ?>"
+                                        <img class="champ_selected"  src="<?php echo $iconSummonerGame ?>"
                                              alt="<?php echo $nomChampionPartie['id'] ?>"
                                              title="<?php echo $nomChampionPartie['id'] ?>">
                                         <div class="summ_name">
@@ -320,7 +320,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                         $iconItem = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/0.png'
                                         ?>
                                         <div class=collum_size_champ>
-                                            <a href="index.php?Controleur=Affichage&action=afficherChampionDetail&nomChamp=<?= $nomChampionGame['id'] ?>"><img
+                                            <a href="/Champion/<?= $nomChampionGame['id'] ?>"><img
                                                         class="img_mastery_3" src="<?= $iconSummonerGameBan ?>"
                                                         title="<?= $nomChampionGame['id'] ?>"></a>
                                         </div>
