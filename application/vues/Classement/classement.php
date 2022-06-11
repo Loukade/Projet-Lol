@@ -18,32 +18,32 @@ $api = new Api();
 <section class="classement">
     <div class="header_classement">
         <div class="header_part iron">
-            <a href="index.php?Controleur=Classement&action=afficherIron">  <img src="img/iron.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherIron">  <img src="/img/iron.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part bronze">
-            <a href="index.php?Controleur=Classement&action=afficherBronze"> <img src="img/bronze.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherBronze"> <img src="/img/bronze.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part silver">
-            <a href="index.php?Controleur=Classement&action=afficherSilver">  <img src="img/silver.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherSilver">  <img src="/img/silver.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part gold">
-            <a href="index.php?Controleur=Classement&action=afficherGold"> <img src="img/gold.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherGold"> <img src="/img/gold.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part platine">
-            <a href="index.php?Controleur=Classement&action=afficherPlatine">  <img src="img/platine.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherPlatine">  <img src="/img/platine.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part diamond">
-            <a href="index.php?Controleur=Classement&action=afficherDiamant"><img src="img/diamond.png"
+            <a href="index.php?Controleur=Classement&action=afficherDiamant"><img src="/img/diamond.png"
                                                                                   class="img_classement " alt=""></a>
         </div>
         <div class="header_part master">
-            <a href="index.php?Controleur=Classement&action=afficherMaster">  <img src="img/master.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherMaster">  <img src="/img/master.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part grandmaster">
-            <a href="index.php?Controleur=Classement&action=afficherGrandmaster">   <img src="img/grandmaster.png" class="img_classement " alt=""></a>
+            <a href="index.php?Controleur=Classement&action=afficherGrandmaster">   <img src="/img/grandmaster.png" class="img_classement " alt=""></a>
         </div>
         <div class="header_part challenger">
-            <a href="index.php?Controleur=Classement&action=afficherChallenger">  <img src="img/challenger.png" class="img_classement " alt=""> </a>
+            <a href="index.php?Controleur=Classement&action=afficherChallenger">  <img src="/img/challenger.png" class="img_classement " alt=""> </a>
         </div>
     </div>
 
@@ -94,7 +94,7 @@ $api = new Api();
             <div class="content_classement">
                 <div class="player_classement">
                     <div class="ranked"> <?= $i+1 ?>#</div>
-                    <div class="username"><img src="img/<?= $classement['tier'] ?>.png" class="icon_summoner"><?= $classement['summonerName'] ?></div>
+                    <div class="username"><img src="/img/<?= $classement['tier'] ?>.png" class="icon_summoner"><?= $classement['summonerName'] ?></div>
                     <div class="points"> <?= $classement['leaguePoints'] ?> LP <?php if(isset($classement['miniSeries'])){
 
                             $classement['miniSeries']['progress'] = str_replace('L', '❌', $classement['miniSeries']['progress']);

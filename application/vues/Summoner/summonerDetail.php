@@ -109,7 +109,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                     <h3><?php echo $arrDetailsSummoners['queueType'] ?></h3>
                                     <div class="profil_rank">
                                         <img class="img_rank"
-                                             src="img/<?php echo $arrDetailsSummoners['tier'] ?>.png"
+                                             src="/img/<?php echo $arrDetailsSummoners['tier'] ?>.png"
                                              alt="">
                                         <div>
                                             <h2><?php echo $arrDetailsSummoners['tier'] . ' ' . $arrDetailsSummoners['rank'] ?></h2>
@@ -130,7 +130,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                 <div class="game_type_info">
                                     <h3>Unranked</h3>
                                     <div class="profil_rank">
-                                        <img class="img_rank" src="img/unranked.png" alt="">
+                                        <img class="img_rank" src="/img/unranked.png" alt="">
                                     </div>
                                 </div>
                                 <?php
@@ -153,7 +153,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
 
                             <div class="mastery">
                                 <img class="img_mastery_1" src="<?php echo $imageChamp ?>" alt="">
-                                <img class="img_mastery_1" src="img/masteries/<?php echo $masteries ?>.jpg" alt="">
+                                <img class="img_mastery_1" src="/img/masteries/<?php echo $masteries ?>.jpg" alt="">
                                 <div><?php echo $champInfo['name'] ?></div>
                                 <?php $pointMasteries = number_format($pointMasteries, 0);
                                 $pointMasteries = str_replace(",", " ", $pointMasteries); ?>
@@ -402,11 +402,11 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                 <div class="collum_info_creep">
                                                     <p>
                                                         <?php echo $arrInfoParticipants['totalMinionsKilled'] + $arrInfoParticipants['neutralMinionsKilled'] ?></p>&nbsp;<img
-                                                            class="historic_icon" src="img/sbire.png" title="Sbire">
+                                                            class="historic_icon" src="/img/sbire.png" title="Sbire">
                                                 </div>
                                                 <div class="collum_info_game">
                                                     <p> <?php echo $arrInfoParticipants['goldEarned'] ?></p>&nbsp;<img
-                                                            class="historic_icon" src="img/goldM.png" title="Gold">
+                                                            class="historic_icon" src="/img/goldM.png" title="Gold">
                                                 </div>
 
                                             </div>
@@ -417,7 +417,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                     : <?php echo $arrInfoParticipants['champLevel'] ?>  </p>
                                             </div>
                                             <div class="row_historic">
-                                                <img class="" src="img/<?= $arrInfoParticipants['teamPosition'] ?>.png"
+                                                <img class="" src="/img/<?= $arrInfoParticipants['teamPosition'] ?>.png"
                                                      alt="" title="<?= $arrInfoParticipants['teamPosition'] ?>">
                                             </div>
                                         </div>
