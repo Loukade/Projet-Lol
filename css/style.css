@@ -330,20 +330,9 @@ padding: 5px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: 7s appear;
     
  }
-@keyframes appear{
-    from{
-        opacity: 0;
-    }
-    90%{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+
 .historic_game{
     width: 70%;
     display: flex;
