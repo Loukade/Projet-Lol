@@ -355,7 +355,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                 <?php $matchLol = $europeApi . '/lol/match/v5/matches/by-puuid/' . $puuid . '/ids';
                 $idMatchLol = $Api->requestApi($matchLol, 'GET', '', '');
                 foreach ($idMatchLol as $arrMatch) { ?>
-                    <div class="historic_game">
+                        <div class="historic_game">
                         <div class="username_history">
                             <?php
                             $matchLolById = $europeApi . '/lol/match/v5/matches/' . $arrMatch;
@@ -472,6 +472,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                      alt="" title="<?= $arrInfoParticipants['teamPosition'] ?>">
                                             </div>
                                         </div>
+                                        <a href="index.php?Controleur=Affichage&action=afficherHistorique&game=<?= $arrMatch?>">Test</a>
 
                                         <?php
                                     }
