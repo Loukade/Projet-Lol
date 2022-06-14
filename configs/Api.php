@@ -51,7 +51,6 @@ class Api
      * @param url The url of the API you want to call.
      * @param type GET, POST, PUT, DELETE
      * @param data the data you want to send to the API.
-     *
      * @return The request is being returned.
      */
     public function requestApi($url, $type , $data)

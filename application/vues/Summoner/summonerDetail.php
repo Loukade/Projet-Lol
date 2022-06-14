@@ -43,6 +43,34 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
         return false;
     }
 
+    function getPositionChamp($idChamp)
+    {
+        $Api = new Api();
+        $summoners = 'http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
+        $championRatePosition = $Api->requestApi($summoners, 'GET', '', '');
+
+        for($i = 1; $i < count($championRatePosition['data']); $i++){
+            if($i = $idChamp){
+                if($idChamp == 200){
+                    return 'JUNGLE';
+                }
+
+                if($championRatePosition['data'][$i]['TOP']['playRate'] > 0 && $championRatePosition['data'][$i]['MIDDLE']['playRate'] == 0 && $championRatePosition['data'][$i]['JUNGLE']['playRate'] == 0 && $championRatePosition['data'][$i]['BOTTOM']['playRate'] == 0 && $championRatePosition['data'][$i]['UTILITY']['playRate'] == 0)
+                    return 'TOP';
+                elseif($championRatePosition['data'][$i]['MIDDLE']['playRate'] > 0 && $championRatePosition['data'][$i]['TOP']['playRate'] == 0 && $championRatePosition['data'][$i]['JUNGLE']['playRate'] == 0 && $championRatePosition['data'][$i]['BOTTOM']['playRate'] == 0 && $championRatePosition['data'][$i]['UTILITY']['playRate'] == 0)
+                    return 'MIDDLE';
+                elseif($championRatePosition['data'][$i]['JUNGLE']['playRate'] > 0 && $championRatePosition['data'][$i]['TOP']['playRate'] == 0 && $championRatePosition['data'][$i]['MIDDLE']['playRate'] == 0 && $championRatePosition['data'][$i]['BOTTOM']['playRate'] == 0 && $championRatePosition['data'][$i]['UTILITY']['playRate'] == 0)
+                    return 'JUNGLE';
+                elseif($championRatePosition['data'][$i]['BOTTOM']['playRate'] > 0 && $championRatePosition['data'][$i]['TOP']['playRate'] == 0 && $championRatePosition['data'][$i]['MIDDLE']['playRate'] == 0 && $championRatePosition['data'][$i]['JUNGLE']['playRate'] == 0 && $championRatePosition['data'][$i]['UTILITY']['playRate'] == 0)
+                    return 'BOTTOM';
+                elseif ($championRatePosition['data'][$i]['UTILITY']['playRate'] > 0 && $championRatePosition['data'][$i]['TOP']['playRate'] == 0 && $championRatePosition['data'][$i]['MIDDLE']['playRate'] == 0 && $championRatePosition['data'][$i]['JUNGLE']['playRate'] == 0 && $championRatePosition['data'][$i]['BOTTOM']['playRate'] == 0)
+                    return 'SUPPORT';
+
+            }
+        }
+    }
+
+
     function getChampionInfo($id = 1)
     {
         $versions = file_get_contents('https://ddragon.leagueoflegends.com/api/versions.json');
@@ -80,7 +108,8 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
 } else
     $rep = 'Erreur';
 
- if ($rep == "good") { ?>
+ if ($rep == "good") {
+     ?>
         <section class="container_2">
             <main class="left_side ">
                 <div class="profil">
@@ -247,15 +276,20 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                     <div class="champ_row">
                                         <div class="summ_name">
 
-                                            <?php $SummonerName = $datasRecherchePartie['participants'][$i]['summonerName'] ?>
+
+                                            <?php $SummonerName = $datasRecherchePartie['participants'][$i]['summonerName'] ;
+                                            $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
+                                            $positionChampBlue = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
+                                            ?>
                                             <div><a style="color: black;"
                                                     href="/Summoner/<?php echo $SummonerName ?>"><?php echo $SummonerName ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerBlue ?> </div>
+                                            <div class="rank"><?php echo $positionChampBlue ?> </div>
                                         </div>
 
                                         <?php
-                                        $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
+
                                         $iconSummonerGame = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartie['id'] . '.png'; ?>
                                         <a href="/Champion/<?php echo $nomChampionPartie['id'] ?>"><img class="champ_selected" src="<?php echo $iconSummonerGame ?>"
                                              alt="<?php echo $nomChampionPartie['id'] ?>"
@@ -280,6 +314,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                     <div class="champ_row">
                                         <?php
                                         $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
+                                        $positionChampRed = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
                                         $iconSummonerGame = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartie['id'] . '.png'; ?>
                                         <img class="champ_selected"  src="<?php echo $iconSummonerGame ?>"
                                              alt="<?php echo $nomChampionPartie['id'] ?>"
@@ -289,6 +324,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                     href=""><?php echo $datasRecherchePartie['participants'][$i]['summonerName'] ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerRed ?></div>
+                                            <div class="rank"><?php echo $positionChampRed ?></div>
                                         </div>
                                     </div>
                                 <?php } ?>
