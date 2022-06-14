@@ -147,6 +147,14 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                         <div>
                                             <h2><?php echo $arrDetailsSummoners['tier'] . ' ' . $arrDetailsSummoners['rank'] ?></h2>
                                             <span><?php echo $arrDetailsSummoners['leaguePoints'] ?> LP</span>
+                                            <span><?php if(isset($arrDetailsSummoners['miniSeries'])){
+
+                                                    $arrDetailsSummoners['miniSeries']['progress'] = str_replace('L', '❌', $arrDetailsSummoners['miniSeries']['progress']);
+                                                    $arrDetailsSummoners['miniSeries']['progress'] = str_replace('W', '✔️', $arrDetailsSummoners['miniSeries']['progress']);
+                                                    $arrDetailsSummoners['miniSeries']['progress'] = str_replace('N', '-', $arrDetailsSummoners['miniSeries']['progress']);
+                                                    echo $arrDetailsSummoners['miniSeries']['progress'];
+
+                                                }?> </span>
                                         </div>
                                     </div>
                                     <div class="stat_win">
