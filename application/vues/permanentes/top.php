@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style_permanent.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <?php
 
+    <?php
   if(isset($_REQUEST['Controleur'])){
     if($_REQUEST['action'] == "afficherSummoner" || $_REQUEST['action'] == "afficherDetailSummoner" ){ ?>
         <link rel="stylesheet" href="/css/style.css">

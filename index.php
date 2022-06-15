@@ -1,4 +1,6 @@
 <?php
+session_cache_limiter('private, must-revalidate');
+session_cache_expire(60);
 session_start();
 
 require_once 'configs/chemins.class.php';
@@ -14,7 +16,7 @@ require_once chemins::CONFIGS."Api.php"; // chemins vers mysql_config.class.php
 require_once chemins::VUES_PERMANENTES."top.php";
 
 
-//ob_start();
+ob_start();
 if (!isset($_REQUEST['Controleur']))
 {
    require_once(Chemins::VUES_SUMMONER . "summonerPage.php");
@@ -31,8 +33,8 @@ else {
         $objetControleur->$action();
     }
 }
-//$content = ob_get_clean();
-//echo $content;
+$content = ob_get_clean();
+echo $content;
 
 
 //Affichage du pied de page 

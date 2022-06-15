@@ -1,6 +1,5 @@
 <?php
 include('summonerPage.php');
-
 if(isset($_REQUEST['Pseudo']))
     $searchSummoners = $_REQUEST['Pseudo'];
 
@@ -123,16 +122,6 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                     </div>
                     <div class="all_ranked_type">
                         <?php
-
-
-                        // il est en game de placement alors// {
-                        // "miniSeries": {
-                        //  "target": 3,
-                        //	"wins": 2,
-                        //	"losses": 2,
-                        //	"progress": "LWLWN"
-                        //	}
-                        //}
                         foreach ($datasDetailsSummoners as $arrDetailsSummoners) {
 
                             if (!empty($arrDetailsSummoners['queueType'])) {
@@ -287,13 +276,13 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
 
                                             <?php $SummonerName = $datasRecherchePartie['participants'][$i]['summonerName'] ;
                                             $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
-                                            $positionChampBlue = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
+//                                            $positionChampBlue = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
                                             ?>
                                             <div><a style="color: black;"
                                                     href="/Summoner/<?php echo $SummonerName ?>"><?php echo $SummonerName ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerBlue ?> </div>
-                                            <div class="rank"><?php echo $positionChampBlue ?> </div>
+<!--                                            <div class="rank">--><?php //echo $positionChampBlue ?><!-- </div>-->
                                         </div>
 
                                         <?php
@@ -322,7 +311,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                     <div class="champ_row">
                                         <?php
                                         $nomChampionPartie = getChampionInfo($datasRecherchePartie['participants'][$i]['championId']);
-                                        $positionChampRed = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
+//                                        $positionChampRed = getPositionChamp($datasRecherchePartie['participants'][$i]['championId']);
                                         $iconSummonerGame = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartie['id'] . '.png'; ?>
                                         <img class="champ_selected"  src="<?php echo $iconSummonerGame ?>"
                                              alt="<?php echo $nomChampionPartie['id'] ?>"
@@ -332,7 +321,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                     href=""><?php echo $datasRecherchePartie['participants'][$i]['summonerName'] ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerRed ?></div>
-                                            <div class="rank"><?php echo $positionChampRed ?></div>
+<!--                                            <div class="rank">--><?php //echo $positionChampRed ?><!--</div>-->
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -472,7 +461,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                      alt="" title="<?= $arrInfoParticipants['teamPosition'] ?>">
                                             </div>
                                         </div>
-                                        <a href="index.php?Controleur=Affichage&action=afficherHistorique&game=<?= $arrMatch?>">Test</a>
+                                        <a href="/Historique/<?= $searchSummoners?>/<?= $arrMatch?>">Test</a>
 
                                         <?php
                                     }
