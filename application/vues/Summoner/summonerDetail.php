@@ -318,7 +318,7 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                              title="<?php echo $nomChampionPartie['id'] ?>">
                                         <div class="summ_name">
                                             <div><a style="color: black;"
-                                                    href=""><?php echo $datasRecherchePartie['participants'][$i]['summonerName'] ?></a>
+                                                    href="/Summoner/<?php echo $SummonerName ?>"><?php echo $SummonerName ?></a>
                                             </div>
                                             <div class="rank"><?php echo $rankSummonnerRed ?></div>
 <!--                                            <div class="rank">--><?php //echo $positionChampRed ?><!--</div>-->
@@ -365,7 +365,11 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                         title="<?= $nomChampionGame['id'] ?>"></a>
                                         </div>
                                         <div class="collum_info">
-                                            <p class="win"><?php if ($arrInfoParticipants['win'] == true) { ?> Victoire <?php } else { ?> Défaite <?php } ?> </p>
+                                            <p class="win"><?php if ($arrInfoParticipants['win'] == true) {
+                                                ?> <span class="green">Victoire</span> <?php
+                                            } else
+                                            { ?> <span class="red">Défaite</span> <?php
+                                            } ?> </p>
 
 
                                             <p class="text_gametype"><?php
@@ -407,29 +411,50 @@ if (isset($datasSummoners['status']['status_code']) != 404 || $datasSummoners ==
                                                     $iconItem0 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item0'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem0 ?>"><?php
                                                 }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
+                                                }
                                                 if ($arrInfoParticipants['item1'] != 0) {
                                                     $iconItem1 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item1'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem1 ?>"><?php
+                                                }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
                                                 }
                                                 if ($arrInfoParticipants['item2'] != 0) {
                                                     $iconItem2 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item2'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem2 ?>"><?php
                                                 }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
+                                                }
                                                 if ($arrInfoParticipants['item3'] != 0) {
                                                     $iconItem3 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item3'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem3 ?>"><?php
+                                                }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
                                                 }
                                                 if ($arrInfoParticipants['item4'] != 0) {
                                                     $iconItem4 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item4'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem4 ?>"><?php
                                                 }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
+                                                }
                                                 if ($arrInfoParticipants['item5'] != 0) {
                                                     $iconItem5 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item5'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem5 ?>"><?php
                                                 }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
+                                                }
                                                 if ($arrInfoParticipants['item6'] != 0) {
                                                     $iconItem6 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $arrInfoParticipants['item6'] . '.png';
                                                     ?> <img class="items" src="<?php echo $iconItem6 ?>"><?php
+                                                }
+                                                else{
+                                                    ?> <img class="items" src="/img/empty_items.png"><?php
                                                 }
                                                 ?>
                                             </div>

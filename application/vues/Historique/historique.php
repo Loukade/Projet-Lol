@@ -101,10 +101,10 @@ function getSummonerSpellInfo($id = 1)
             <div class="ban_red">
                 <div class="win">
                     <?php if($matchLolByGames['info']['teams'][0]['win'] == true) {
-                        ?> Victoire <?php
+                        ?> <span class="green">Victoire</span> <?php
                     }else
                     {
-                        ?> Defaite <?php
+                        ?> <span class="red">Defaite</span> <?php
                     }
                     ?>
 
@@ -116,10 +116,10 @@ function getSummonerSpellInfo($id = 1)
                 <div class="gold_team"> <img  class="img_gold"src="/img/goldM.png" alt=""><?= $goldBlue ?> </div>
                 <div class="kda_team"> <?= $killBlue ?>/<?= $deathBlue ?>/<?= $assistBlue ?> </div>
                 <div class="win"> <?php if($matchLolByGames['info']['teams'][1]['win'] == true) {
-                        ?> Victoire <?php
+                        ?> <span class="green"> Victoire </span> <?php
                     }else
                     {
-                        ?> Defaite <?php
+                        ?> <span class="red">Defaite </span><?php
                     }
                     ?></div>
             </div>
@@ -130,7 +130,7 @@ function getSummonerSpellInfo($id = 1)
                 <?php foreach ($matchLolByGames['info']['teams'][0]['bans'] as $arrBanRed){
                     $nomChampionPartieBan = getChampionInfo($arrBanRed['championId']);
                     if ($nomChampionPartieBan['id'] == NULl) {
-                    $iconSummonerGameBan = '';
+                    $iconSummonerGameBan = '/img/empty_items.png';
                      } else {
                     $iconSummonerGameBan = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartieBan['id'] . '.png';
                     } ?>
@@ -142,7 +142,7 @@ function getSummonerSpellInfo($id = 1)
               <?php foreach ($matchLolByGames['info']['teams'][1]['bans'] as $arrBanBlue){
                   $nomChampionPartieBanBlue = getChampionInfo($arrBanBlue['championId']);
                   if ($nomChampionPartieBanBlue['id'] == NULl) {
-                      $iconSummonerGameBanBlue = '';
+                      $iconSummonerGameBanBlue = '/img/empty_items.png';
                   } else {
                       $iconSummonerGameBanBlue = 'http://ddragon.leagueoflegends.com/cdn/' . $latest . '/img/champion/' . $nomChampionPartieBanBlue['id'] . '.png';
                   } ?>
@@ -189,30 +189,52 @@ function getSummonerSpellInfo($id = 1)
                                 $iconItem0 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item0'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem0 ?>"><?php
                             }
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                            }
                             if ($matchLolByGames['info']['participants'][$i]['item1'] != 0) {
                                 $iconItem1 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item1'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem1 ?>"><?php
+                            }
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
                             }
                             if ($matchLolByGames['info']['participants'][$i]['item2'] != 0) {
                                 $iconItem2 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item2'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem2 ?>"><?php
                             }
-                            if ($matchLolByGames['info']['participants'][$i]['item3'] != 0) {
-                                $iconItem3 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item3'] . '.png';
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                            }
+                            if ($matchLolByGames['info']['participants'][$i]['item6'] != 0) {
+                                $iconItem3 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item6'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem3 ?>"><?php
+                            }
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
                             }
                             if ($matchLolByGames['info']['participants'][$i]['item4'] != 0) {
                                 $iconItem4 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item4'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem4 ?>"><?php
                             }
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                            }
                             if ($matchLolByGames['info']['participants'][$i]['item5'] != 0) {
                                 $iconItem5 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item5'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem5 ?>"><?php
                             }
-                            if ($matchLolByGames['info']['participants'][$i]['item6'] != 0) {
-                                $iconItem6 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item6'] . '.png';
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                            }
+                            if ($matchLolByGames['info']['participants'][$i]['item3'] != 0) {
+                                $iconItem6 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item3'] . '.png';
                                 ?> <img class="items_icon" src="<?php echo $iconItem6 ?>"><?php
-                            }?>
+                            }
+                            else{
+                                ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                            }
+                                ?>
                         </div>
                     </div>
                 </div>
@@ -259,30 +281,52 @@ function getSummonerSpellInfo($id = 1)
                                     $iconItem0 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item0'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem0 ?>"><?php
                                     }
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                                    }
                                     if ($matchLolByGames['info']['participants'][$i]['item1'] != 0) {
                                     $iconItem1 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item1'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem1 ?>"><?php
+                                    }
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
                                     }
                                     if ($matchLolByGames['info']['participants'][$i]['item2'] != 0) {
                                     $iconItem2 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item2'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem2 ?>"><?php
                                     }
-                                    if ($matchLolByGames['info']['participants'][$i]['item3'] != 0) {
-                                    $iconItem3 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item3'] . '.png';
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                                    }
+                                    if ($matchLolByGames['info']['participants'][$i]['item6'] != 0) {
+                                    $iconItem3 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item6'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem3 ?>"><?php
+                                    }
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
                                     }
                                     if ($matchLolByGames['info']['participants'][$i]['item4'] != 0) {
                                     $iconItem4 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item4'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem4 ?>"><?php
                                     }
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                                    }
                                     if ($matchLolByGames['info']['participants'][$i]['item5'] != 0) {
                                     $iconItem5 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item5'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem5 ?>"><?php
                                     }
-                                    if ($matchLolByGames['info']['participants'][$i]['item6'] != 0) {
-                                    $iconItem6 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item6'] . '.png';
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                                    }
+                                    if ($matchLolByGames['info']['participants'][$i]['item3'] != 0) {
+                                    $iconItem6 = 'https://ddragon.leagueoflegends.com/cdn/12.10.1/img/item/' . $matchLolByGames['info']['participants'][$i]['item3'] . '.png';
                                     ?> <img class="items_icon" src="<?php echo $iconItem6 ?>"><?php
-                                                }?>
+                                                }
+                                    else{
+                                        ?> <img class="items_icon" src="/img/empty_items.png"><?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
