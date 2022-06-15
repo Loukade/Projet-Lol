@@ -56,7 +56,7 @@ function getRunesInfo($id = 1 , $id2 = 1)
     $list = $json;
 
     foreach ($list as $key => $value) {
-        if ($list[$key]['id'] == $id) {;
+        if ($list[$key]['id'] == $id) {
             foreach ($list[$key]['slots'] as $key2 => $value2) {
                     foreach ($list[$key]['slots'][$key2]['runes'] as $key3 => $value3) {
                         if ($list[$key]['slots'][$key2]['runes'][$key3]['id'] == $id2) {
@@ -65,7 +65,6 @@ function getRunesInfo($id = 1 , $id2 = 1)
                     }
             }
         }
-        return false;
     }
 
 }
@@ -251,7 +250,8 @@ function getSummonerSpellInfo($id = 1)
                                         <img class="champ_icon_mini"src="http://ddragon.leagueoflegends.com/cdn/<?= $latest ?>/img/spell/<?= $spell1['id'] ?>.png" alt="" title="<?= $spell1['name'] ?>">
                                         <img class="champ_icon_mini"src="http://ddragon.leagueoflegends.com/cdn/<?= $latest ?>/img/spell/<?= $spell2['id'] ?>.png" alt="" title="<?= $spell2['name'] ?>">
                                     </div>
-                                    <img class="champ_icon"src="/img/lol_background.jpg" alt="">
+                                     <?php $runePrincipal = getRunesInfo($matchLolByGames['info']['participants'][$i]['perks']['styles'][0]['style'] , $matchLolByGames['info']['participants'][$i]['perks']['styles'][0]['selections'][0]['perk']); ?>
+                                    <img class="champ_icon"src="https://ddragon.canisback.com/img/<?= $runePrincipal['icon']?>" alt="" title="<?= $runePrincipal['name']?>">
                                 </div>
                                 <div class="items">
 
